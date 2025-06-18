@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moof Studios</title>
+
+  <!-- Font link -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif; /* Fun yet neat font */
+      background-color: #000000; /* Black background */
+      color: #FFFFFF; /* White text */
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* Header */
+    header {
+      background-image: url('https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/Banner123.png?v=1737153555985');
+      background-size: contain;
+      background-position: right;
+      background-repeat: no-repeat;
+      height: 150px; /* Adjusted to make the logo fit without cropping */
+      padding: 20px;
+      display: flex;
+      justify-content: flex-start; /* Align header to the left */
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+    }
+
+    header .logo {
+      max-width: 200px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-start; /* Align links to the left */
+      margin-bottom: 10px;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #FFFFFF; /* White color */
+      font-size: 1.4em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+      color: #FF00FF; /* Neon pink hover effect */
+    }
+
+    .social-media {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 15px;
+  position: absolute;
+  top: 20px;
+  left: 50%; /* Start from the horizontal center */
+  transform: translateX(-50%); /* Adjust for true centering */
+}
+
+
+    .social-media a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .social-media img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    /* Section headings with underlines */
+    h2 {
+      font-size: 2.5em;
+      color: #FF00FF; /* Neon pink */
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #FF00FF;
+    }
+
+    /* Sections */
+    section {
+      padding: 40px 20px;
+    }
+    }
+
+        /* About Moof Studios Section */
+        #about-moof {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        #about-moof h2 {
+            font-size: 2.5em;
+            color: #00FF00;
+            border-bottom: 2px solid #00FF00;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        #about-moof p {
+            font-size: 1.5em;
+            margin: 10px;
+        }
+
+        /* Video Section */
+        #video-section {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        #background-video {
+            width: 80%;
+            height: 500px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+    /* Game sections */
+    .game, .retired-game {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .game img, .retired-game img {
+      width: 90%;  /* Larger images */
+      max-width: 400px;
+      height: auto;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .game p, .retired-game p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    .game a {
+      color: #00FF00; /* Neon green color */
+      font-weight: bold;
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 2px solid #00FF00;
+      border-radius: 5px;
+    }
+
+    .game a:hover {
+      background-color: #00FF00;
+      color: #000000; /* Black text on hover */
+    }
+
+    /* Retired games */
+    .retired-game p {
+      font-size: 1.1em;
+      margin: 10px 0;
+      color: #FFFFFF; /* White color for retired games descriptions */
+    }
+
+    .retired-game h3 {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #00FF00; /* Green color */
+    }
+
+    /* Digital Collectibles */
+    .collectibles {
+      margin-top: 40px;
+    }
+
+    .collectibles img {
+      width: 90%;
+      max-width: 400px;
+      margin: 20px 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .collectibles p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    .collectibles-banner img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: contain;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #111111; /* Dark gray background */
+      padding: 20px;
+      color: #FFFFFF; /* White text */
+      font-size: 1em;
+    }
+
+    /* New Color for Game Names */
+    .game h3, .retired-game h3 {
+      color: #00FF00; /* Neon green color for game titles */
+      font-size: 1.4em; /* Increased font size for game titles */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="social-media">
+      <a href="https://x.com/moof_studios" target="_blank">
+        <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/x%20logo.png?v=1737151363041" alt="X Logo">
+      </a>
+      <a href="https://discord.gg/cG2SdexwHf" target="_blank">
+        <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/discord.jpg?v=1737151251399" alt="Discord Logo">
+      </a>
+    </div>
+  </header>
+
+  <!-- Moof Studios Section -->
+<section id="moof-studios">
+    <div id="about-moofo" style="font-size: 20px; line-height: 1.6; color: #FFFFFF;">
+    <h2 style="font-size: 40px; font-weight: bold;">About Moof Studios</h2>
+      
+      <style>
+  @font-face {
+    font-family: 'Fixation Grunge';
+    src: url('https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/fixationg.ttf?v=1737194753547') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fixation Grunge', sans-serif;
+    font-size: 2.5em;
+    color: #ff6ec7; /* Example color, adjust as needed */
+  }
+</style>
+      
+<style>
+/* Floating button container */
+.floating-button-container {
+  position: fixed;
+  top: 20px; /* Position from the top */
+  left: 20px; /* Position from the left */
+  z-index: 1000;
+}
+
+/* Floating button */
+#floating-button {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+#floating-button:hover {
+  transform: scale(1.1);
+}
+
+/* Hidden social links */
+#social-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust distance from the button */
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#social-links a {
+  margin: 5px 0;
+  text-align: center;
+}
+
+#social-links img {
+  width: 30px;
+  height: 30px;
+}
+
+</style>
+
+      
+     <style>
+  /* Default video style for desktop */
+  video {
+    width: 80%; /* Adjust the width to suit your preference */
+    max-width: 800px; /* Set a maximum width for the video */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Styles for tablets and smaller screens */
+  @media (max-width: 768px) {
+    video {
+      width: 90%; /* Slightly larger for medium screens */
+    }
+  }
+
+  /* Styles for mobile devices */
+  @media (max-width: 480px) {
+    video {
+      width: 100%; /* Uses the full width of the screen for smaller devices */
+    }
+  }
+</style>
+      
+      <!-- Video section -->
+      <video width="60%" controls muted autoplay style="margin-bottom: 20px;">
+        <source src="https://cdn.glitch.me/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/Nova_City_V2_Promo.mp4?v=17371561498255" type="video/mp4">
+        Your browser does not support the video tag.
+          </video>
+      <!-- About Moof Studios text -->
+    <p style="font-size: 20px; line-height: 1.6; color: #FFFFFF;">
+        At Moof Studios, we’re passionate about creating exciting and immersive games that bring joy to players. Our games are not just about gameplay—they are about building a fun, supportive community, where players can enjoy unique experiences and connect with others. We offer fun avatars to play with, allowing for even more personalized enjoyment. As we continue to grow, we’re working on new games and experiences that will keep our community engaged and entertained. And beyond that, we also support others in the gaming world, working to help foster creativity and collaboration across the gaming space. Check out our current games below as well as our Strategy Guide!</p>
+    </div>
+  
+</section>
+  
+  <!-- Current Games Section -->
+  <section id="current-games">
+    <h2>Current Games</h2>
+    <div class="game">
+      <!-- Featured New Game -->
+<div style="border: 3px solid gold; padding: 20px; margin-bottom: 30px; background-color: #1a1a1a; border-radius: 10px; box-shadow: 0 0 20px gold;">
+  <h2 style="color: gold; font-size: 2rem; margin-top: 0;">NEW GAME: OMNIPIGEON </h2>
+      <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/omnipigeon.png?v=1747476070958" alt="OMNIPIGEON">
+  <p style="color: #eee; font-size: 1.2rem; margin: 10px 0;">
+    Escape the lab. Evolve your weirdness. Ascend into the golden god of pigeons. OMNIPIGEON is our latest game and it’s absolutely unhinged.
+  </p>
+  <a href="https://theportal.to/OMNIPIGEON" target="_blank" style="display: inline-block; background-color: gold; color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold; text-decoration: none;">
+    🕹️ Play OMNIPIGEON Now
+  </a>
+</div>
+      <h3>Nova City</h3>
+      <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/nova.png?v=1737149169304" alt="Nova City">
+      <p>Explore a futuristic neon-lit city (desktop only).</p>
+      <a href="https://theportal.to/?room=1a4cc045-2d19-4337-80c9-6da262e22cdb" target="_blank">Explore Now</a>
+    </div>
+    <div class="game">
+      <h3>The Mountain Temple</h3>
+      <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/mountain.png?v=1737149131951" alt="The Mountain Temple">
+      <p>Puzzle and obstacle game set in a mountain temple (desktop only).</p>
+      <a href="https://theportal.to/?room=c9ca5210-766d-4d7c-8b68-161ba130e1db" target="_blank">Play Now</a>
+    </div>
+    <div class="game">
+      <h3>Breakfast Scramble</h3>
+      <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/breakfast.png?v=1737149187592" alt="Breakfast Scramble">
+      <p>Navigate a breakfast table filled with sticky hazards (desktop only).</p>
+      <a href="https://theportal.to/?room=7d5d2eb8-0b6a-4e30-bfc6-2d2e5cf3b64b" target="_blank">Play Now</a>
+    </div>
+    <div class="game">
+      <h3>Boulder Dash</h3>
+      <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/boulder.png?v=1737149197600" alt="Boulder Dash">
+      <p>Race to escape the skull crushing boulder (desktop only).</p>
+      <a href="https://theportal.to/?room=4ad9a11d-c9a1-41a0-ad8f-cbf0a4554b05" target="_blank">Play Now</a>
+    </div>
+  </section>
+  
+   <section><!-- Video section -->
+      <video width="60%" controls muted autoplay style="margin-bottom: 20px;">
+        <source src="https://cdn.glitch.me/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/Boulder%20Dash%20Promo.mp4?v=1737295686789" type="video/mp4">
+        Your browser does not support the video tag.
+          </video>
+      <!-- About Moof Studios text -->
+    <p style="font-size: 20px; line-height: 1.6; color: #FFFFFF;">
+    Immersive 3D Gameplay - in your Browser! <br>
+    Built on <a href="https://theportal.to/" target="_blank" style="color: #ff6ec7; text-decoration: none;">Portals</a> technology. Only possible on Solana. Mobile support coming soon.
+</p>
+</section>
+
+  <!-- Retired Games Section -->
+  <section id="retired-games">
+    <h2>Retired Games</h2>
+    <div class="retired-game">
+      <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/lostisland.png?v=1737149153878" alt="The Lost Island">
+      <h3>The Lost Island</h3>
+      <p>An obstacle-based game with dinosaurs, this mini game won a Portals competition.</p>
+    </div>
+    <div class="retired-game">
+      <h3>Nova City V1</h3>
+      <p>The original version of Nova City, now updated with new experiences.</p>
+    </div>
+    <div class="retired-game">
+      <h3>Retro Play</h3>
+      <p>Retro-themed obstacle game with leaderboard competitions.</p>
+    </div>
+  </section>
+  
+
+  <!-- Digital Collectibles Section -->
+  <section id="digital-collectibles">
+    <h2>Moof Digital Collectibles</h2>
+    <div class="collectibles">
+      <a href="https://moof-world.gitbook.io/mong-world" target="_blank">
+        <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/strat.jpeg?v=1737149140154" alt="Moof Digital Collectibles">
+      </a>
+      <p>Our Moof Digital Collectibles include vibrant 2D artwork and exclusive 3D avatars that unlock exciting benefits for users.</p>
+      <p>For full details, refer to our <a href="https://moof-world.gitbook.io/mong-world" target="_blank">Moof World Strategy Guide</a> to discover all the perks!</p>
+    </div>
+    <div class="collectibles-banner">
+      <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/3%20moofs.png?v=1737149080069" alt="Moofs Banner">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Moof Studios. All Rights Reserved.</p>
+  </footer>
+  
+  <div class="floating-button-container">
+  <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/IMG_1015.PNG?v=1737296600159" alt="Socials Button" id="floating-button">
+  <div id="social-links">
+    <a href="https://x.com/moof_studios" target="_blank">
+      <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/x%20logo.png?v=1737151363041" alt="X Logo">
+    </a>
+    <a href="https://discord.gg/cG2SdexwHf" target="_blank">
+      <img src="https://cdn.glitch.global/1af3e8d0-2d66-49f8-bbb4-db565276e7ac/discord.jpg?v=1737151251399" alt="Discord Logo">
+    </a>
+  </div>
+</div>
+
+<script>
+  const floatingButton = document.getElementById('floating-button');
+  const socialLinks = document.getElementById('social-links');
+
+  floatingButton.addEventListener('click', () => {
+    const isVisible = socialLinks.style.display === 'flex';
+    socialLinks.style.display = isVisible ? 'none' : 'flex';
+  });
+</script>  
+  
+</body>
+</html>
