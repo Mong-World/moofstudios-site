@@ -338,6 +338,31 @@
     video {
       width: 100%; /* Uses the full width of the screen for smaller devices */
     }
+
+  <div class="floating-button-container">
+  <img id="floating-button" src="https://raw.githubusercontent.com/Mong-World/moofstudios-site/main/mooflogo.png" alt="Floating Moof Logo">
+  <div id="social-links">
+    <a href="https://x.com/moof_studios" target="_blank">
+      <img src="https://raw.githubusercontent.com/Mong-World/moofstudios-site/main/x-icon.png" alt="X">
+    </a>
+    <a href="https://discord.gg/cG2SdexwHf" target="_blank">
+      <img src="https://raw.githubusercontent.com/Mong-World/moofstudios-site/main/discord-icon.png" alt="Discord">
+    </a>
+  </div>
+</div>
+
+    <script>
+  document.getElementById("floating-button").addEventListener("click", function() {
+    const links = document.getElementById("social-links");
+    if (links.style.display === "flex") {
+      links.style.display = "none";
+    } else {
+      links.style.display = "flex";
+    }
+  });
+</script>
+
+  
   }
 </style>
       
